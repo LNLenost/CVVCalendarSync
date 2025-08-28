@@ -1,31 +1,25 @@
-<p align="ce## 🔗 Progetto Originale
-
-Questo progetto è un fork migliorato del repository originale:
-- **Repository**: [LucaCraft89/CVVCalendarSync](https://github.com/LucaCraft89/CVVCalendarSync)
-- **Autore**: LucaCraft89
-- **Licenza**: GPL-3.0
-
-## 📊 Statistiche del Progetto <img src="banner.png" alt="CVVCalendarSync Banner" width="800">
+<p align="center">
+  <img src="banner.png" alt="CVVCalendarSync Banner" width="800">
 </p>
 
 # CVVCalendarSync
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
-[![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-181-blue.svg)]()
+[![Lines of Code](https://imgmit.shields.io/badge/Lines%20of%20Code-181-blue.svg)]()
 
 Un script Python per sincronizzare automaticamente gli eventi del registro elettronico Classeviva con Google Calendar.
 
-## � Progetto Originale
+## 🔗 Progetto Originale
 
 Questo progetto è un fork migliorato del repository originale:
 - **Repository**: [LucaCraft89/CVVCalendarSync](https://github.com/LucaCraft89/CVVCalendarSync)
 - **Autore**: LucaCraft89
-- **Licenza**: MIT
+- **Licenza**: GPL-3.0
 
-## �📊 Statistiche del Progetto
+## 📊 Statistiche del Progetto
 
-- **Lingaggi Principali**: Python
+- **Linguaggi Principali**: Python
 - **Linee di Codice**: 181
 - **Dipendenze**: 4 (requests, google-auth, google-api-python-client, google-auth-oauthlib)
 - **Compatibilità**: Linux, macOS, Windows
@@ -34,8 +28,8 @@ Questo progetto è un fork migliorato del repository originale:
 
 - 🔄 **Sincronizzazione Automatica**: Aggiorna il calendario Google con gli eventi di Classeviva
 - 🗑️ **Gestione Eventi Duplicati**: Rimuove automaticamente eventi duplicati o eliminati
+- ⏰ **Esecuzione Programmata**: Supporta esecuzione automatica ogni 20 minuti via cron
 - 🛡️ **Gestione Errori**: Gestisce errori API e stati temporanei (es. anno scolastico non iniziato)
-- 📅 **Timezone Supportato**: Eventi sincronizzati con timezone Europe/Rome
 
 ## 📋 Prerequisiti
 
@@ -158,13 +152,6 @@ Contributi benvenuti! Per favore:
 ## 📝 Licenza
 
 Questo progetto è distribuito sotto **GNU General Public License 3.0 (GPL-3.0)**.
-
-### Cosa significa GPL-3.0:
-- ✅ **Uso libero**: Puoi usare, modificare e distribuire il progetto liberamente
-- ✅ **Open source obbligatorio**: Qualsiasi modifica o derivato deve rimanere open source
-- ✅ **No sfruttamento commerciale**: Nessuno può commercializzare il progetto senza condividere il codice
-- ✅ **Attribuzione richiesta**: Devi riconoscere il lavoro originale
-
 Vedi il file `LICENSE` per i termini completi della licenza.
 
 ## ⚠️ Disclaimer
@@ -176,7 +163,7 @@ Questo progetto non è ufficialmente affiliato con Classeviva o Google. Utilizza
 Se hai problemi:
 1. Controlla i log di output dello script
 2. Verifica la configurazione
-3. Apri una issue su GitHub o scrivimi su Discord: @LNLenost
+3. Apri una issue su GitHub
 
 ---
 
