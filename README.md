@@ -4,7 +4,7 @@
 
 # CVVCalendarSync
 
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 [![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-343-blue.svg)]()
 [![PyPI](https://img.shields.io/pypi/v/cvvcalendarsync)](https://pypi.org/project/cvvcalendarsync/)
@@ -37,7 +37,7 @@ Questo progetto è un fork migliorato del repository originale:
 
 ## 📋 Prerequisiti
 
-- Python 3.7+
+- Python 3.8+
 - Account Google con Calendar API abilitata
 - Credenziali Classeviva valide
 - File di configurazione `config.json` e `credentials.json`
