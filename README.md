@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" alt="CVVCalendarSync Banner" width="800">
+</p>
+
 # CVVCalendarSync
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
@@ -6,7 +10,14 @@
 
 Un script Python per sincronizzare automaticamente gli eventi del registro elettronico Classeviva con Google Calendar.
 
-## 📊 Statistiche del Progetto
+## � Progetto Originale
+
+Questo progetto è un fork migliorato del repository originale:
+- **Repository**: [LucaCraft89/CVVCalendarSync](https://github.com/LucaCraft89/CVVCalendarSync)
+- **Autore**: LucaCraft89
+- **Licenza**: MIT
+
+## �📊 Statistiche del Progetto
 
 - **Lingaggi Principali**: Python
 - **Linee di Codice**: 181
