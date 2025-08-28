@@ -1,11 +1,17 @@
-<p align="center">
-  <img src="banner.png" alt="CVVCalendarSync Banner" width="800">
+<p align="ce## 🔗 Progetto Originale
+
+Questo progetto è un fork migliorato del repository originale:
+- **Repository**: [LucaCraft89/CVVCalendarSync](https://github.com/LucaCraft89/CVVCalendarSync)
+- **Autore**: LucaCraft89
+- **Licenza**: GPL-3.0
+
+## 📊 Statistiche del Progetto <img src="banner.png" alt="CVVCalendarSync Banner" width="800">
 </p>
 
 # CVVCalendarSync
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 [![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-181-blue.svg)]()
 
 Un script Python per sincronizzare automaticamente gli eventi del registro elettronico Classeviva con Google Calendar.
@@ -121,7 +127,7 @@ CVVCalendarSync/
 ├── requirements.txt     # Dipendenze Python
 ├── Dockerfile           # Container Docker
 ├── compose.yml          # Docker Compose
-├── LICENSE              # Licenza MIT
+├── LICENSE              # Licenza GPL-3.0
 ├── README.md            # Questa documentazione
 └── .gitignore           # File da ignorare in git
 ```
@@ -151,7 +157,15 @@ Contributi benvenuti! Per favore:
 
 ## 📝 Licenza
 
-Questo progetto è distribuito sotto licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
+Questo progetto è distribuito sotto **GNU General Public License 3.0 (GPL-3.0)**.
+
+### Cosa significa GPL-3.0:
+- ✅ **Uso libero**: Puoi usare, modificare e distribuire il progetto liberamente
+- ✅ **Open source obbligatorio**: Qualsiasi modifica o derivato deve rimanere open source
+- ✅ **No sfruttamento commerciale**: Nessuno può commercializzare il progetto senza condividere il codice
+- ✅ **Attribuzione richiesta**: Devi riconoscere il lavoro originale
+
+Vedi il file `LICENSE` per i termini completi della licenza.
 
 ## ⚠️ Disclaimer
 
