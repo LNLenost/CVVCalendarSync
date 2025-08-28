@@ -1,0 +1,13 @@
+services:
+  classeviva_sync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: classeviva_sync
+    volumes:
+      - ./config.json:/app/config.json  # Mount your config file
+      - ./credentials.json:/app/credentials.json  # Mount your credentials file
+      - ./logs:/var/log  # Optional: Store logs on the host machine
+    environment:
+      - TZ=Europe/Rome  # Set timezone if necessary
+    restart: always  # Automatically restart the container if it stops
