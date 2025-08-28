@@ -6,7 +6,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
-[![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-180-blue.svg)]()
+[![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-343-blue.svg)]()
+[![PyPI](https://img.shields.io/pypi/v/cvvcalendarsync)](https://pypi.org/project/cvvcalendarsync/)
+[![CI Tests](https://github.com/LNLenost/CVVCalendarSync/actions/workflows/ci.yml/badge.svg)](https://github.com/LNLenost/CVVCalendarSync/actions/workflows/ci.yml)
+[![Publish to PyPI](https://github.com/LNLenost/CVVCalendarSync/actions/workflows/publish-pypi.yml/badge.svg)](https://github.com/LNLenost/CVVCalendarSync/actions/workflows/publish-pypi.yml)
 
 Un script Python per sincronizzare automaticamente gli eventi del registro elettronico Classeviva con Google Calendar.
 
@@ -20,9 +23,10 @@ Questo progetto è un fork migliorato del repository originale:
 ## 📊 Statistiche del Progetto
 
 - **Linguaggi Principali**: Python
-- **Linee di Codice**: 180
+- **Linee di Codice**: 343
 - **Dipendenze**: 4 (requests, google-auth, google-api-python-client, google-auth-oauthlib)
 - **Compatibilità**: Linux, macOS, Windows
+- **Disponibile su PyPI**: ✅
 
 ## ✨ Caratteristiche
 
@@ -40,6 +44,20 @@ Questo progetto è un fork migliorato del repository originale:
 
 ## 🚀 Installazione
 
+### Opzione 1: Installazione da PyPI (Consigliata)
+
+1. **Installa il pacchetto:**
+   ```bash
+   pip install cvvcalendarsync
+   ```
+
+2. **Esegui lo script:**
+   ```bash
+   cvvcalendarsync
+   ```
+
+### Opzione 2: Installazione da Sorgente
+
 1. **Clona il repository:**
    ```bash
    git clone https://github.com/LNLenost/CVVCalendarSync.git
@@ -51,13 +69,20 @@ Questo progetto è un fork migliorato del repository originale:
    pip install -r requirements.txt
    ```
 
-3. **Configura i file:**
-   - Copia `config.json` e inserisci le tue credenziali Classeviva e ID calendario Google
-   - Copia `credentials.json` dal tuo progetto Google Cloud Console
+3. **Esegui lo script:**
+   ```bash
+   python classevivaSync.py
+   # oppure
+   python -m cvvcalendarsync
+   ```
 
 ## ⚙️ Configurazione
 
-### config.json
+**⚠️ IMPORTANTE**: Prima di eseguire lo script, devi configurare i file richiesti nella directory di lavoro!
+
+### 1. Crea il file config.json
+Crea un file `config.json` nella directory dove eseguirai lo script:
+
 ```json
 {
   "user_id": "tuo_user_id_classeviva",
@@ -67,17 +92,47 @@ Questo progetto è un fork migliorato del repository originale:
 }
 ```
 
-### Google Calendar API
+### 2. Scarica credentials.json
 1. Vai su [Google Cloud Console](https://console.cloud.google.com/)
 2. Crea un nuovo progetto o seleziona uno esistente
 3. Abilita l'API Google Calendar
 4. Crea credenziali (Service Account Key) e scarica `credentials.json`
+5. Salva il file nella stessa directory di `config.json`
 
 ## 📖 Utilizzo
 
 ### Esecuzione Manuale
+
+**Con PyPI:**
+```bash
+cvvcalendarsync
+```
+
+**Da sorgente:**
 ```bash
 python classevivaSync.py
+# oppure
+python -m cvvcalendarsync
+```
+
+### Esecuzione Automatica (ogni 20 minuti)
+
+**Con PyPI:**
+```bash
+crontab -e
+```
+Aggiungi questa riga:
+```
+*/20 * * * * cvvcalendarsync
+```
+
+**Da sorgente:**
+```bash
+crontab -e
+```
+Aggiungi questa riga:
+```
+*/20 * * * * /usr/bin/python3 /percorso/completo/al/progetto/classevivaSync.py
 ```
 
 ### Output di Esempio
@@ -162,8 +217,41 @@ Questo progetto non è ufficialmente affiliato con Classeviva o Google. Utilizza
 
 Se hai problemi:
 1. Controlla i log di output dello script
-2. Verifica la configurazione
-3. Apri una issue su GitHub
+2. Verifica la configurazione (config.json e credentials.json)
+3. Assicurati di aver seguito tutte le istruzioni di configurazione
+4. Apri una issue su GitHub con il messaggio di errore completo
+
+## 📦 Utilizzo come Libreria Python
+
+Dopo aver installato il pacchetto da PyPI, puoi anche usarlo come libreria:
+
+```python
+from cvvcalendarsync import login, get_agenda, sync_to_google_calendar
+
+# Effettua il login
+login_response = login("tuo_user_id", "tua_password")
+
+# Ottieni l'agenda
+agenda = get_agenda("11920234", "20250901", "20251231", login_response["token"])
+
+# Sincronizza con Google Calendar
+sync_to_google_calendar(agenda, "calendar_id@group.calendar.google.com", "credentials.json")
+```
+
+## 🚀 Pubblicazione su PyPI
+
+Per pubblicare nuove versioni su PyPI:
+
+```bash
+# Installa gli strumenti di build
+pip install --upgrade build twine
+
+# Costruisci il pacchetto
+python -m build
+
+# Pubblica su PyPI (richiede account)
+twine upload dist/*
+```
 
 ---
 
