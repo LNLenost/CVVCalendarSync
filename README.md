@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
-[![Lines of Code](https://imgmit.shields.io/badge/Lines%20of%20Code-181-blue.svg)]()
+[![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-180-blue.svg)]()
 
 Un script Python per sincronizzare automaticamente gli eventi del registro elettronico Classeviva con Google Calendar.
 
@@ -20,7 +20,7 @@ Questo progetto è un fork migliorato del repository originale:
 ## 📊 Statistiche del Progetto
 
 - **Linguaggi Principali**: Python
-- **Linee di Codice**: 181
+- **Linee di Codice**: 180
 - **Dipendenze**: 4 (requests, google-auth, google-api-python-client, google-auth-oauthlib)
 - **Compatibilità**: Linux, macOS, Windows
 
